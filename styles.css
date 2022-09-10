@@ -91,3 +91,8 @@ button:active {
 #results {
     width: 100px;
 }
+
+#copyright {
+    margin-top: 4px;
+    color: lightsteelblue;
+}
