@@ -4,7 +4,32 @@ body {
 }
 
 h1 {
-    color: rgb(163, 163, 163);
+    color: lightsteelblue;
     margin: 70px;
+    margin-bottom: 40px;
+    padding-bottom: 20px;
+    border-bottom: solid;
+    border-bottom-color: lightsteelblue;
     font-family: sans-serif;
+}
+
+.choices {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+}
+
+button {
+    background-color: rgb(98, 98, 98);
+    color: lightsteelblue;
+    border-style: solid;
+    border-color: lightsteelblue;
+    border-radius: 15px;
+    height: 150px;
+    width: 150px;
+    font-size: 28px;
+}
+
+button:hover {
+    font-size: 150%;
 }
