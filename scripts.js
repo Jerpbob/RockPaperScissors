@@ -39,7 +39,7 @@ function finishGame() {
         cScore.textContent = computerScore;
         yScore.textContent = yourScore;
         finalResult.style.width = "auto";
-    } else return;
+    } else finalResult.style.width = "150px"; return;
 }
 
 const rock = document.querySelector("#rock");
