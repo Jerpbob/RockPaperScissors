@@ -27,17 +27,18 @@ function playRound(playerSelection, computerChoice) {
     }
 };
 
-function finishGame(playerScore, cpuScore) {
-    if ((playerScore === 5) || (cpuScore === 5)) {
-        if (playerScore === 5) {
+function finishGame() {
+    if ((yourScore === 5) || (computerScore === 5)) {
+        if (yourScore === 5) {
             finalResult.textContent = "You win the game! Click anywhere to restart."
-        } else if (cpuScore === 5) {
+        } else if (computerScore === 5) {
             finalResult.textContent = "The computer wins the game. Click again to restart."
         };
-        playerScore = 0;
-        cpuScore = 0;
-        cScore.textContent = cpuScore;
-        yScore.textContent = playerScore;
+        yourScore = 0;
+        computerScore = 0;
+        cScore.textContent = computerScore;
+        yScore.textContent = yourScore;
+        finalResult.style.width = "auto";
     } else return;
 }
 
@@ -52,8 +53,7 @@ const cScore = document.querySelector(".cScore");
 window.addEventListener('click', function (e) {
     let computerChoice = getComputerChoice();
     let result = playRound(e.target.id, computerChoice);
-    console.log(yScore);
-    console.log(cScore);
+    finalResult.textContent = computerChoice;
     if (result === "tie") {
         results.innerHTML = "Tie!";
     } else if (result === "computer") {
@@ -63,6 +63,7 @@ window.addEventListener('click', function (e) {
         results.innerHTML = "You win!";
         yScore.textContent = yourScore;
     }
+    console.log(yourScore, computerScore);
     finishGame(yourScore, computerScore);
 });
 

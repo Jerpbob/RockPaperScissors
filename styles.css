@@ -46,6 +46,7 @@ button:active {
 }
 
 .computerChoice {
+    width: 150px;
     padding: 5px;
     border-top-style: solid;
     border-bottom-style: solid;
