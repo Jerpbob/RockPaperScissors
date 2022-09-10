@@ -41,6 +41,9 @@ function finishGame(playerScore, cpuScore) {
     } else return;
 }
 
+const rock = document.querySelector("#rock");
+const paper = document.querySelector("#paper");
+const scissors = document.querySelector("#scissors");
 const finalResult = document.querySelector(".computerChoice");
 const results = document.getElementById("results");
 const yScore = document.querySelector(".yScore");
