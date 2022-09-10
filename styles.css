@@ -1,6 +1,7 @@
 body {
     background-color: rgb(52, 52, 52);
     text-align: center;
+    font-family: sans-serif;
 }
 
 h1 {
@@ -10,7 +11,6 @@ h1 {
     padding-bottom: 20px;
     border-bottom: solid;
     border-bottom-color: lightsteelblue;
-    font-family: sans-serif;
 }
 
 .choices {
@@ -32,4 +32,48 @@ button {
 
 button:hover {
     font-size: 150%;
+}
+
+button:active {
+    font-size: 120%;
+}
+
+.container {
+    margin: 75px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.computerChoice {
+    padding: 5px;
+    border-top-style: solid;
+    border-bottom-style: solid;
+    border-top-color: lightsteelblue;
+    border-bottom-color: lightsteelblue;
+    border-radius: 10px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: lightsteelblue;
+}
+
+.score {
+    background-color: rgb(98, 98, 98);
+    color: lightsteelblue;
+    border-style: solid;
+    border-color: lightsteelblue;
+    border-top-left-radius: 35px;
+    border-bottom-right-radius: 35px;
+    border-top-right-radius: 7px;
+    border-bottom-left-radius: 7px;
+    margin: auto 200px;
+    margin-top: 30px;
+    margin-bottom: 0px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    justify-content: space-around;
+    align-items: center;
 }
