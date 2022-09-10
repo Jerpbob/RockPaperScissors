@@ -27,7 +27,21 @@ function playRound(playerSelection, computerChoice) {
     }
 };
 
+function finishGame(playerScore, cpuScore) {
+    if ((playerScore === 5) || (cpuScore === 5)) {
+        if (playerScore === 5) {
+            finalResult.textContent = "You win the game! Click anywhere to restart."
+        } else if (cpuScore === 5) {
+            finalResult.textContent = "The computer wins the game. Click again to restart."
+        };
+        playerScore = 0;
+        cpuScore = 0;
+        cScore.textContent = cpuScore;
+        yScore.textContent = playerScore;
+    } else return;
+}
 
+const finalResult = document.querySelector(".computerChoice");
 const results = document.getElementById("results");
 const yScore = document.querySelector(".yScore");
 const cScore = document.querySelector(".cScore");
@@ -45,9 +59,7 @@ window.addEventListener('click', function (e) {
     } else if (result === "user") {
         results.innerHTML = "You win!";
         yScore.textContent = yourScore;
-    } else {
-        results.innerHTML = "There's something wrong";
     }
-
+    finishGame(yourScore, computerScore);
 });
 
